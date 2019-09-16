@@ -71,7 +71,7 @@ const arr = [
     {name: 'Yaroslav', phone: '+30650444455'}
   ];
 
-const findPhoneByName = (name) => {
+let findPhoneByName = (name) => {
   for(const item of arr) {
     if (name === item.name) return item.phone
   }
@@ -79,3 +79,15 @@ const findPhoneByName = (name) => {
 };
 
 console.log(findPhoneByName('Yaroslav2'));
+
+//Коллекции: хеш-таблицы (объекты)
+
+const map = {
+  mark: {name: 'Marcus Aurelius', phone: '+380445554433'},
+  yarik: {name: 'Yaroslav', phone: '+30650444455'}
+};
+
+findPhoneByName = (map, name) => map[name].phone;
+
+console.log(findPhoneByName(map, 'mark'));
+
